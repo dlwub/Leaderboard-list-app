@@ -8,25 +8,30 @@
 <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
 <body>
 	<div id="container">
-		<h1 id="main-header">Leaderboard</h1>
+		<div id="header-container">
+			<h1 id="main-header">Leaderboard</h1>							
+		</div>
+		
 		<div id="main-container">
 			<div id="left-frame">
-				<div id="score-title-btn">
+				<div id="title-btn-div">
 					<h2 id="score-title">Recent Scores</h2>
 					<button id="refresh-btn">Refresh</button>
 				</div>
-				<table id="leaderboard-table"></table>
+				<table id="leaderboard-table">
+				</table>
 			</div>
 			<div id="right-frame">
 				<h2 id="add-score">Add your score</h2>
 				<form id="score-form" action="/" method="post">
-					<input id="name-input" type="text" placeholder="Your name"><br>
-					<input id="score-input" type="text" placeholder="Your score"><br>
+					<input id="name-input" class="input-field" type="text" placeholder="Your name" required><br>
+					<input id="score-input" class="input-field" type="text" placeholder="Your score" required><br>
 					<button id="submit-btn" type="submit">Submit</button>
+					<small id="notice"></small>
 				</form>
 			</div>
 		</div>
 	</div>
-	<footer></footer>
+	<footer >&copy; Afrisport</footer>
 </body>
 </html>

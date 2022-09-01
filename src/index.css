@@ -1,23 +1,47 @@
 body {
   box-sizing: border-box;
+  background: url(./images/photo-goalf.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  color: rgb(91, 7, 247);
+  font-size: 16px;
 }
 
 #container {
   width: 100%;
 }
 
+#header-container {
+  display: flex;
+  height: 15vh;
+  margin-left: 3vw;
+  margin-bottom: 2vh;
+}
+
 #main-header {
-  margin-left: 1.5rem;
+  font-size: 2.5rem;
+}
+
+#score-title,
+#add-score {
+  font-size: 1.5rem;
+}
+
+.icon {
+  height: 7vh;
+  padding-top: 5vh;
+  margin-right: 0.5vw;
 }
 
 #main-container,
-#score-title-btn {
+#title-btn-div {
   display: flex;
 }
 
 #main-container {
-  margin: 0 20%;
-  gap: 20%;
+  margin: 10vh 20vw 40vh;
+  gap: 20vw;
 }
 
 #left-frame,
@@ -31,17 +55,40 @@ body {
   text-align: center;
 }
 
-#score-title-btn {
+#title-btn-div {
   justify-content: center;
   align-items: center;
+}
+
+#refresh-btn,
+#submit-btn {
+  background: rgb(91, 7, 247);
+  color: #fff;
+  border-radius: 0.25rem;
+  padding: 0.5vw 1.5vw;
+  font-size: 1.5vw;
 }
 
 #refresh-btn {
   margin-left: 5vw;
 }
 
+input[type="text"] {
+  padding: 0.5vw 1.5vw;
+}
+
+#submit-btn {
+  display: flex;
+  width: 7.5vw;
+  margin-left: auto;
+}
+
+#notice {
+  color: red;
+}
+
 table {
-  border: solid 2px black;
+  border: solid 2px rgb(91, 7, 247);
   width: 100%;
 }
 
@@ -50,22 +97,42 @@ table {
   flex-direction: column;
 }
 
-#leaderboard-table tbody:nth-child(even) {
-  background-color: rgb(152, 156, 152);
+#leaderboard-table tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.25vw 0.5vw;
 }
 
-tr {
-  display: flex;
-  justify-content: flex-start;
-  margin-left: 5px;
+#leaderboard-table tbody:nth-child(even) {
+  background-color: rgb(91, 7, 247);
+  color: #fff;
 }
 
 #score-form {
   gap: 10px;
 }
 
-#submit-btn {
-  display: flex;
-  width: 40%;
-  margin-left: auto;
+footer {
+  width: 100%;
+  background: rgb(122, 118, 223);
+  color: #fff;
+  padding: 2rem;
+  font-size: larger;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+
+  #main-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #score-form {
+    width: 80%;
+  }
 }
